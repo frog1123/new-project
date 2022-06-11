@@ -3,13 +3,13 @@ const { ApolloServer, gql } = require('apollo-server');
 
 const typeDefs = gql`
   type Query {
-    post: String!
+    post(id: ID!): String!
   }
 `;
 
 const resolvers = {
   Query: {
-    post: () => 'post cool'
+    post: (parent: any, { id }: { id: number }) => `post ${id}`
   }
 };
 

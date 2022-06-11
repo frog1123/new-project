@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export const Post = () => {
+export const Post = (props: any) => {
   const [data, setData] = useState<any>(null);
   const [isLoading, setLoading] = useState<boolean>(false);
 
@@ -13,7 +13,7 @@ export const Post = () => {
         body: JSON.stringify({
           query: `
             query {
-              post
+              post(id: ${props.id})
             }
           `
         })

@@ -7,7 +7,9 @@
     "dev": "concurrently \"npm run watch\" \"npm run api-dev\" \"npm run client-dev\"",
     "watch": "cd api & tsc -w",
     "api-dev": "nodemon ./api/dist/index.js",
-    "client-dev": "cd ./client/next-app && npm run dev"
+    "client-dev": "cd ./client/next-app && npm run dev",
+    "client-build": "cd client/next-app && npm run build",
+    "client-start": "cd client/next-app && npm run start"
   },
   "devDependencies": {
     "@types/node": "^17.0.42",
